@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+langgraph
+langchain_ollama
+langchain_core
+IPython
+openpyxl

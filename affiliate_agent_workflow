@@ -1,0 +1,15 @@
+digraph "Affiliate Agent Workflow" {
+	A [label="User Query"]
+	B [label="Search Database"]
+	C [label="Log Search History"]
+	D [label="Scrape Amazon"]
+	E [label="Store in Database"]
+	F [label="Return Results"]
+	A -> C [label="Log the query"]
+	A -> B [label="Search database"]
+	B -> F [label="Found in DB"]
+	B -> D [label="Not found in DB"]
+	D -> E [label="Save scraped data"]
+	E -> B [label="Retry search"]
+	B -> F [label="Found after scrape"]
+}
